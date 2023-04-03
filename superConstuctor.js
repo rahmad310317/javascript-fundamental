@@ -1,23 +1,26 @@
-
 class Employee {
-  constructor(name) {
-    this.name = name;
+  constructor(fistname) {
+    this.fistname = fistname;
   }
   getName(name) {
     console.info(`Hello ${this.name}, my name is ${name}`);
   }
-
 }
-
 class Manager extends Employee {
-  constructor(name) {
-    super(name);
+  constructor(fistname, lastname) {
+    super(fistname);
+    this.lastname = lastname;
   }
   getName(name) {
-    console.info(`Hello ${this.name}, my name is ${name}`);
+    console.info(`Hello ${this.fistname}, my name is ${this.lastname}`);
   }
 
 }
 
-const manager = new Manager('John');
-manager.getName('John');
+const fistname = new Manager('John', 'Rambo');
+fistname.getName('John');
+
+const lastname = new Employee('John', 'Doe');
+lastname.getName('John');
+
+// Path: superConstuctor.js
